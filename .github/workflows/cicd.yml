@@ -12,9 +12,9 @@ jobs:
         run: npm test
     env:
       PORT: ${{ secrets.ENV_PORT }}
-      SERVER_SECRET: ${{ secrets.SERVER_SECRET }}
+      SERVER_SECRET: ${{ secrets.SERVER_SECRET}}
       MONGODB_URI: ${{ secrets.MONGODB_URI }}
-      SENDGRID_API_KEY: ${{ secrets.SENDGRID_API_KEY }}
+      SENDGRID_API_KEY: ${{ secrets.SENDGRID_API_KEY}}
   cd:
     runs-on: ubuntu-latest
     needs: ci
