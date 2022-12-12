@@ -1,5 +1,9 @@
 name: cicd-workflow 
-on: push 
+on:
+  push:
+    branches: [ main, master ]
+  pull_request:
+    branches: [ main, master ]
 jobs:
   ci: 
     runs-on: ubuntu-latest
