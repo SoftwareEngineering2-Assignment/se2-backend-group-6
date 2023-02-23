@@ -6,7 +6,7 @@ const test = require('ava').default;
 const got = require('got');
 const listen = require('test-listen');
 
-const app = require('../src/index');
+const app = require('../src/index.js');
 const {jwtSign} = require('../src/utilities/authentication/helpers');
 
 test.before(async (t) => {
