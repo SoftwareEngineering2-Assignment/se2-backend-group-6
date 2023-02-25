@@ -23,11 +23,11 @@ jobs:
 
   cd:
     runs-on: ubuntu-latest
+    if: always()
     needs: ci
-    if: github.ref == 'refs/heads/main'
+    -if: github.ref == 'refs/heads/main'
     steps:
       - name: SSH connection to the remote system
-        if: always()
         uses: appleboy/ssh-action@master
         with: 
           host: ${{ secrets.SSH_HOST }}
