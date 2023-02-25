@@ -37,6 +37,8 @@ jobs:
             cd ~/se2/6/se2-backend
             git reset --hard origin/main 
             git fetch
+            git config --local user.name harryfilis
+            git config --local user.email harry.filis@yahoo.gr
             git pull https://${{ secrets.CLONE_TOKEN }}@github.com/SoftwareEngineering2-Assignment/se2-backend-group-6 main
             # git clone https://github.com/SoftwareEngineering2-Assignment/se2-backend-group-6 .
             bash -ci 'npm install'
